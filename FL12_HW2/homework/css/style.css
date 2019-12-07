@@ -87,6 +87,7 @@
 	}
 	.blocks .boxes .box p::first-letter {
 	    font-weight: bold;
+	    font-style: italic;
 	}
 	.contact-form input.form-control{
 		border: none;
