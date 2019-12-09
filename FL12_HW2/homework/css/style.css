@@ -26,14 +26,14 @@
 	.tm-banner-text {
 	    text-shadow: 2px 4px 3px #333;
 	    animation-name: banner-text; 
-	    animation-duration: 4s;
+	    animation-duration: 3s;
 	}
 	@keyframes banner-text{
 		0%{
-			margin-left: 200px;
+			transform:translateX(200px);
 		}
 		100%{
-			margin-left: 0;
+			transform:translateX(0px);
 		}
 	}
 	.flex-2-col {
