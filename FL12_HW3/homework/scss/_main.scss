@@ -5,6 +5,7 @@
 }
 body {
     background: $contentBg;
+    font-family: $mainFont;
 }
 @mixin landingLogo{
 	img{

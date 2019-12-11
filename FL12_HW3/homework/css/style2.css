@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #21232E; }
+  background: #21232E;
+  font-family: "Source Sans Pro", sans-serif; }
 
 .size-wrap, .header .header-wrap, .footer .footer-wrap {
   width: 100%;
