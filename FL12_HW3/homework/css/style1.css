@@ -1,8 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
   background: #fff; }
+
+.size-wrap, .header .header-wrap, .footer .footer-wrap {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto; }
 
 main {
   margin: 0 auto;
   width: 960px; }
+
+.header {
+  background-image: url(../img/m-h-day.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  padding: 20px 0 80px; }
+  .header .header-wrap .landing-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; }
+    .header .header-wrap .landing-logo img {
+      width: 45px;
+      height: 45px;
+      margin-right: 15px; }
+    .header .header-wrap .landing-logo p {
+      font-size: 20px; }
+      .header .header-wrap .landing-logo p span {
+        text-align: center;
+        display: block;
+        font-size: 12px; }
+
+.section .section_card {
+  display: flex;
+  align-items: center;
+  background-color: #21232E;
+  padding: 15px;
+  margin-bottom: 20px; }
+
+.footer {
+  padding: 60px 0;
+  background-color: #21232E; }
+  .footer .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .footer .footer-wrap .footer_logo {
+      display: flex;
+      align-items: center;
+      color: #fff; }
+      .footer .footer-wrap .footer_logo img {
+        width: 45px;
+        height: 45px;
+        margin-right: 15px; }
+      .footer .footer-wrap .footer_logo p {
+        font-size: 20px; }
+        .footer .footer-wrap .footer_logo p span {
+          text-align: center;
+          display: block;
+          font-size: 12px; }
+    .footer .footer-wrap .footer_text, .footer .footer-wrap .footer-cr {
+      color: #fff; }
 
 /*# sourceMappingURL=style1.css.map */

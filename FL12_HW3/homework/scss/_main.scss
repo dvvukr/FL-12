@@ -1,7 +1,96 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
 body {
-    background: $contentBackground;
+    background: $contentBg;
+}
+@mixin landingLogo{
+	img{
+		width: 45px;
+		height: 45px;
+	    margin-right: 15px;
+	}
+	p{
+		font-size: 20px;
+	
+		span{
+		    text-align: center;
+			display: block;
+			font-size:12px;
+		}
+	}
+}
+.size-wrap{
+    width: 100%;
+    max-width: 1170px;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+.button{
+	&:hover{
+
+	}
+	&:foxus{
+
+	}
 }
 main {
       margin: 0 auto;
       width: 960px;
+}
+.header{
+	background-image: $headerBg;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100%;
+	padding: 20px 0 80px;
+
+	.header-wrap{
+		@extend .size-wrap;
+
+		.landing-logo{
+			display: flex;
+	    	align-items: center;
+	    	margin-bottom: 40px;
+			@include landingLogo
+		}
+	}
+}
+
+.section{
+	.section_card{
+		display: flex;
+    	align-items: center;
+		background-color: $sectionBg;
+		padding: 15px;
+		margin-bottom: 20px;
+	}
+}
+
+.footer{
+	padding: 60px 0;
+	background-color: $sectionBg;
+
+	.footer-wrap{
+	    display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+		@extend .size-wrap;
+
+    	.footer_logo{
+    		display: flex;
+	    	align-items: center;
+	    	color: #fff;
+    		@include landingLogo
+    	}
+    	.footer_text{
+    		color: #fff;
+    	}
+    	.footer-cr{
+    		@extend .footer_text
+    	}
+	}
 }
