@@ -13,20 +13,43 @@ body {
   margin-right: auto;
   margin-left: auto; }
 
+.textBg, .header .header-wrap .header_heading::before, main.section .section_text::before, main.section .section_banner .section_banner_text_wrap .section_banner_heading::before {
+  content: '';
+  display: inline-block;
+  background-color: #14A0C7;
+  z-index: -1;
+  height: 50px; }
+
+.button, .header .header-wrap .header_button, main.section .section_banner .section_banner_button {
+  background-color: #699900;
+  color: #fff;
+  border: 1px solid #699900;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold; }
+  .button:hover, .header .header-wrap .header_button:hover, main.section .section_banner .section_banner_button:hover {
+    background-color: #77ad00;
+    cursor: pointer; }
+  .button:focus, .header .header-wrap .header_button:focus, main.section .section_banner .section_banner_button:focus {
+    outline: none;
+    box-shadow: none; }
+
 main {
   margin: 0 auto;
-  width: 960px; }
+  width: 980px; }
 
 .header {
   background-image: url(../img/m-h-day.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 100%;
-  padding: 20px 0 80px; }
+  padding: 20px 0 80px;
+  border-bottom-right-radius: 500px 250px;
+  height: 100vh; }
   .header .header-wrap .landing-logo {
     display: flex;
     align-items: center;
-    margin-bottom: 40px; }
+    margin-bottom: 100px; }
     .header .header-wrap .landing-logo img {
       width: 45px;
       height: 45px;
@@ -37,16 +60,78 @@ main {
         text-align: center;
         display: block;
         font-size: 12px; }
+  .header .header-wrap .header_heading {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; }
+    .header .header-wrap .header_heading::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 300px; }
+  .header .header-wrap .header_text {
+    margin-bottom: 20px; }
 
-main.section .section_card_wrap .section_card {
-  display: flex;
-  align-items: center;
-  background-color: #21232E;
-  padding: 15px;
-  margin-bottom: 20px; }
+main.section {
+  padding-top: 40px; }
+  main.section .section_text {
+    position: relative;
+    z-index: 1;
+    color: #2C2F3C;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; }
+    main.section .section_text::before {
+      position: absolute;
+      bottom: 0;
+      width: 190px; }
+  main.section .section_card_wrap {
+    margin-bottom: 120px; }
+    main.section .section_card_wrap .section_card {
+      display: flex;
+      align-items: center;
+      background-color: #21232E;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px; }
+      main.section .section_card_wrap .section_card .section_card_img {
+        margin-right: 85px; }
+      main.section .section_card_wrap .section_card .section_card_right_container {
+        text-align: center;
+        color: #fff; }
+        main.section .section_card_wrap .section_card .section_card_right_container .section_card_heading {
+          font-weight: bold;
+          margin-bottom: 20px; }
+        main.section .section_card_wrap .section_card .section_card_right_container .section_card_text {
+          text-align: left;
+          margin-bottom: 15px; }
+  main.section .section_banner {
+    background: linear-gradient(to right, #629217, #3260C6);
+    border-radius: 5px;
+    padding: 45px 100px;
+    display: flex;
+    justify-content: space-between; }
+    main.section .section_banner .section_banner_text_wrap .section_banner_heading {
+      position: relative;
+      z-index: 1;
+      font-size: 20px;
+      font-weight: bold;
+      color: #2C2F3C;
+      margin-bottom: 10px; }
+      main.section .section_banner .section_banner_text_wrap .section_banner_heading::before {
+        position: absolute;
+        left: 50px;
+        bottom: 0;
+        width: 65px; }
+    main.section .section_banner .section_banner_text_wrap .section_banner_text {
+      color: #fff; }
 
 .footer {
-  padding: 60px 0;
+  position: relative;
+  z-index: -1;
+  margin-top: -40px;
+  padding: 80px 0 40px;
   background-color: #21232E;
   color: #fff; }
   .footer .footer-wrap {
@@ -67,5 +152,8 @@ main.section .section_card_wrap .section_card {
           text-align: center;
           display: block;
           font-size: 12px; }
+    .footer .footer-wrap .footer_text {
+      width: 100%;
+      max-width: 315px; }
 
 /*# sourceMappingURL=style1.css.map */

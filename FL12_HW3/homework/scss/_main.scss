@@ -29,17 +29,33 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+.textBg{
+	content: '';
+	display: inline-block;
+	background-color: $textBg;
+	z-index: -1;
+	height: 50px;
+}
 .button{
+	background-color: $btnBg;
+	color: $btnColor;
+	border: 1px solid $btnBg;
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: bold;
+
 	&:hover{
-
+		background-color: lighten($btnBg, 4%);
+		cursor: pointer;
 	}
-	&:foxus{
-
+	&:focus{
+		outline: none;
+		box-shadow: none;
 	}
 }
 main {
       margin: 0 auto;
-      width: 960px;
+      width: 980px;
 }
 .header{
 	background-image: $headerBg;
@@ -47,6 +63,8 @@ main {
 	background-position: 50% 50%;
 	background-size: 100%;
 	padding: 20px 0 80px;
+    border-bottom-right-radius: 500px 250px;
+    height: 100vh;
 
 	.header-wrap{
 		@extend .size-wrap;
@@ -54,46 +72,119 @@ main {
 		.landing-logo{
 			display: flex;
 	    	align-items: center;
-	    	margin-bottom: 40px;
-			@include landingLogo
+	    	margin-bottom: 100px;
+			@include landingLogo;
 		}
 
-		.header_heading{}
-		.header_text{}
-		.header_button{}
+		.header_heading{
+			margin-bottom: 20px;
+			position: relative;
+			z-index: 1;
+
+			&::before{
+				@extend .textBg;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 300px;
+			}
+		}
+		.header_text{
+			margin-bottom: 20px;
+		}
+		.header_button{
+			@extend .button;
+		}
 		.login{}
 	}
 }
 
 main.section{
-	.section_text{}
+	padding-top: 40px;
+
+	.section_text{
+		position: relative;
+		z-index: 1;
+		color: $titleColor;
+	    font-size: 24px;
+   		font-weight: bold;
+		text-align: center;
+		margin-bottom: 20px;
+		&::before{
+			@extend .textBg;
+			position: absolute;
+			bottom: 0;
+			width: 190px;
+		}
+	}
 	.section_card_wrap{
+	    margin-bottom: 120px;
+
 		.section_card{
 			display: flex;
 	    	align-items: center;
 			background-color: $sectionBg;
+			border-radius: 5px;
 			padding: 15px;
 			margin-bottom: 20px;
 
-			.section_card_img{}
+			.section_card_img{
+			    margin-right: 85px;
+			}
 			.section_card_right_container{
-				.section_card_heading{}
-				.section_card_text{}
+				text-align: center;
+				color: #fff;
+
+				.section_card_heading{
+					font-weight: bold;
+				    margin-bottom: 20px;
+				}
+				.section_card_text{
+					text-align: left;
+					margin-bottom: 15px;
+				}
 				.section_link{}
 			}
 		}
 	}
 	.section_banner{
+		background: $gradientBg;
+		border-radius: 5px;
+	    padding: 45px 100px;
+    	display: flex;
+    	justify-content: space-between;
+
 		.section_banner_text_wrap{
-			.section_banner_heading{}
-			.section_banner_text{}
+			.section_banner_heading{
+				position: relative;
+				z-index: 1;
+				font-size: 20px;
+				font-weight: bold;
+				color: $titleColor;
+				margin-bottom: 10px; 
+				&::before{
+					@extend .textBg;
+					position: absolute;
+					left: 50px;
+					bottom: 0;
+					width: 65px;
+				}
+			}
+			.section_banner_text{
+				color: #fff;
+			}
 		}
-		.section_banner_button{}
+		.section_banner_button{
+			@extend .button;
+		}
 	} 
 }
 
 .footer{
-	padding: 60px 0;
+	position: relative;
+    z-index: -1;
+    margin-top: -40px;
+	padding: 80px 0 40px;
 	background-color: $sectionBg;
 	color: #fff;
 
@@ -107,7 +198,11 @@ main.section{
     		display: flex;
 	    	align-items: center;
 	    	color: #fff;
-    		@include landingLogo
+    		@include landingLogo;
+    	}
+    	.footer_text{
+    		width: 100%;
+    		max-width: 315px;
     	}
 	}
 }
