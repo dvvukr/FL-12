@@ -61,6 +61,12 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+.landingLink{
+	color: $whiteColor;
+	&:hover{
+		color: darken($whiteColor, 11%);
+	}
+}
 .button{
 	background-color: $btnBg;
 	color: $btnColor;
@@ -146,7 +152,7 @@ body {
 			}
 		}
 		.login{
-			color: $whiteColor;
+			@extend .landingLink;
 		}
 	}
 }
@@ -216,7 +222,7 @@ main.section{
 					margin-bottom: 15px;
 				}
 				.section_link{
-					color: $whiteColor;
+					@extend .landingLink;
 				}
 			}
 		}

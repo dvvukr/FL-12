@@ -15,6 +15,11 @@ body {
   padding-left: 15px;
   padding-right: 15px; }
 
+.landingLink, .header .header-wrap .login, main.section .section_card_wrap .section_card .section_card_right_container .section_link {
+  color: #fff; }
+  .landingLink:hover, .header .header-wrap .login:hover, main.section .section_card_wrap .section_card .section_card_right_container .section_link:hover {
+    color: #e3e3e3; }
+
 .button, .header .header-wrap .header_button, main.section .section_banner .section_banner_button {
   background-color: #699900;
   color: #fff;
@@ -104,8 +109,6 @@ body {
       .header .header-wrap .header_button {
         display: block;
         margin-bottom: 15px; } }
-  .header .header-wrap .login {
-    color: #fff; }
 
 main.section {
   position: relative;
@@ -174,8 +177,6 @@ main.section {
         main.section .section_card_wrap .section_card .section_card_right_container .section_card_text {
           text-align: justify;
           margin-bottom: 15px; }
-        main.section .section_card_wrap .section_card .section_card_right_container .section_link {
-          color: #fff; }
   main.section .section_banner {
     background: linear-gradient(to right, #629217, #3260C6);
     border-radius: 5px;
