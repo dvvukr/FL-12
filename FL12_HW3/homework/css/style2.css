@@ -35,6 +35,10 @@ body {
   background-size: 100%;
   padding: 20px 0 140px;
   border-bottom-right-radius: 600px 200px; }
+  @media (max-width: 768px) {
+    .header {
+      background-size: cover;
+      padding: 20px 0 80px; } }
   .header .header-wrap .landing-logo {
     display: flex;
     align-items: center;
@@ -49,6 +53,9 @@ body {
         text-align: center;
         display: block;
         font-size: 8px; }
+    @media (max-width: 480px) {
+      .header .header-wrap .landing-logo {
+        margin-bottom: 30px; } }
     .header .header-wrap .landing-logo p {
       color: #fff; }
   .header .header-wrap .header_heading {
@@ -72,6 +79,19 @@ body {
       width: 240px;
       height: 45px;
       left: 0; }
+    @media (max-width: 480px) {
+      .header .header-wrap .header_heading {
+        font-size: 40px;
+        line-height: 50px; }
+        .header .header-wrap .header_heading::before {
+          content: '';
+          background-color: #FF4E33;
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          z-index: -1;
+          width: 176px;
+          height: 45px; } }
   .header .header-wrap .header_text {
     color: #fff;
     font-size: 14px;
@@ -80,6 +100,10 @@ body {
     margin-bottom: 45px; }
   .header .header-wrap .header_button {
     margin-right: 115px; }
+    @media (max-width: 480px) {
+      .header .header-wrap .header_button {
+        display: block;
+        margin-bottom: 15px; } }
   .header .header-wrap .login {
     color: #fff; }
 
@@ -105,6 +129,19 @@ main.section {
       width: 150px;
       height: 45px;
       margin-left: 167px; }
+    @media (max-width: 480px) {
+      main.section .section_text {
+        font-size: 26px; }
+        main.section .section_text::before {
+          content: '';
+          background-color: #FF4E33;
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          z-index: -1;
+          width: 130px;
+          height: 45px;
+          margin-left: 147px; } }
   main.section .section_card_wrap {
     width: 100%;
     max-width: 920px; }
@@ -115,11 +152,18 @@ main.section {
       border-radius: 5px;
       padding: 15px;
       margin-bottom: 20px; }
+      @media (max-width: 768px) {
+        main.section .section_card_wrap .section_card {
+          flex-direction: column; } }
       main.section .section_card_wrap .section_card .section_card_img {
         border-radius: 4px;
         margin-right: 70px;
         width: 100%;
         max-width: 340px; }
+        @media (max-width: 768px) {
+          main.section .section_card_wrap .section_card .section_card_img {
+            margin-bottom: 15px;
+            margin-right: 0; } }
       main.section .section_card_wrap .section_card .section_card_right_container {
         text-align: center;
         color: #fff; }
@@ -145,6 +189,10 @@ main.section {
     transform: translate(-50%, 0);
     width: 100%;
     max-width: 950px; }
+    @media (max-width: 768px) {
+      main.section .section_banner {
+        flex-direction: column;
+        padding: 30px 15px; } }
     main.section .section_banner .section_banner_text_wrap .section_banner_heading {
       position: relative;
       z-index: 1;
@@ -164,16 +212,25 @@ main.section {
         left: 80px; }
     main.section .section_banner .section_banner_text_wrap .section_banner_text {
       color: #fff; }
+      @media (max-width: 768px) {
+        main.section .section_banner .section_banner_text_wrap .section_banner_text {
+          margin-bottom: 15px; } }
 
 .footer {
   padding: 100px 0px 60px;
   background-color: #3B3F50;
   color: #fff; }
+  @media (max-width: 480px) {
+    .footer {
+      padding: 80px 0px 30px; } }
   .footer .footer-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 12px; }
+    @media (max-width: 480px) {
+      .footer .footer-wrap {
+        flex-direction: column; } }
     .footer .footer-wrap .footer_logo {
       display: flex;
       align-items: center;
@@ -188,9 +245,16 @@ main.section {
           text-align: center;
           display: block;
           font-size: 8px; }
+      @media (max-width: 480px) {
+        .footer .footer-wrap .footer_logo {
+          margin-bottom: 15px; } }
     .footer .footer-wrap .footer_text {
       width: 100%;
       max-width: 242px; }
+      @media (max-width: 480px) {
+        .footer .footer-wrap .footer_text {
+          text-align: center;
+          margin-bottom: 15px; } }
     .footer .footer-wrap .footer-cr {
       letter-spacing: 0.5px; }
 

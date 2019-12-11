@@ -27,6 +27,23 @@
 	width: $width;
 	height: 45px;
 }
+@mixin r($point){
+	@if $point==480{
+		@media (max-width: 480px){
+			@content;
+		}
+	}
+	@if $point==768{
+		@media (max-width: 768px){
+			@content;
+		}
+	}
+	@if $point==992{
+		@media (max-width: 992px){
+			@content;
+		}
+	}
+}
 *{
 	margin: 0;
 	@include landingPadd(0px);
@@ -67,6 +84,10 @@ body {
 	background-size: 100%;
 	@include landingPadd(20px 0 140px);
     border-bottom-right-radius: 600px 200px;
+    @include r(768)  { 
+	    background-size: cover;
+	    @include landingPadd(20px 0 80px);
+	}
 
 	.header-wrap{
 		@extend .size-wrap;
@@ -76,6 +97,9 @@ body {
 	    	align-items: center;
 	    	margin-bottom: 60px;
 			@include landingLogo;
+			@include r(480)  { 
+				margin-bottom: 30px;
+			}
 
 			& p{
 				color: $titleColor;
@@ -98,6 +122,13 @@ body {
 				@include textBg(240px);
 				left: 0;
 			}
+			@include r(480)  { 
+				font-size: 40px;
+			    line-height: 50px;
+				&::before{
+					@include textBg(176px);
+				}
+			}
 		}
 		.header_text{
 			color: $headerTextColor;
@@ -109,6 +140,10 @@ body {
 		.header_button{
 			@extend .button;
 			margin-right: 115px;
+			@include r(480)  { 
+			    display: block;
+    			margin-bottom: 15px;
+			}
 		}
 		.login{
 			color: $whiteColor;
@@ -133,6 +168,13 @@ main.section{
 			@include textBg(150px);
 		    margin-left: 167px;
 		}
+		@include r(480)  { 
+		    font-size: 26px;
+		    &::before{
+				@include textBg(130px);
+			    margin-left: 147px;
+			}
+		}
 	}
 	.section_card_wrap{
 	    width: 100%;
@@ -146,12 +188,19 @@ main.section{
 			border-radius: 5px;
 			@include landingPadd(15px);
 			margin-bottom: 20px;
+			@include r(768)  { 
+				flex-direction: column;
+			}
 
 			.section_card_img{
 			    border-radius: 4px;
 			    margin-right: 70px;
 			    width: 100%;
 			    max-width: 340px;
+			    @include r(768)  { 
+					margin-bottom: 15px;
+					margin-right: 0;
+				}
 			}
 			.section_card_right_container{
 				text-align: center;
@@ -185,6 +234,10 @@ main.section{
 	    transform: translate(-50%, 0);
     	width: 100%;
     	max-width: 950px;
+    	@include r(768)  { 
+			flex-direction: column;
+			@include landingPadd(30px 15px);
+		}
 
 		.section_banner_text_wrap{
 			.section_banner_heading{
@@ -201,6 +254,9 @@ main.section{
 			}
 			.section_banner_text{
 				color: $whiteColor;
+				@include r(768)  { 
+					margin-bottom: 15px;
+				}
 			}
 		}
 		.section_banner_button{
@@ -213,6 +269,9 @@ main.section{
 	@include landingPadd(100px 0px 60px);
 	background-color: $sectionBg;
 	color: #fff;
+	@include r(480)  { 
+		@include landingPadd(80px 0px 30px);
+	}
 
 	.footer-wrap{
 	    display: flex;
@@ -220,16 +279,26 @@ main.section{
     	align-items: center;
     	font-size: 12px;
 		@extend .size-wrap;
+		@include r(480)  { 
+			flex-direction: column;
+		}
 
     	.footer_logo{
     		display: flex;
 	    	align-items: center;
 	    	color: #fff;
     		@include landingLogo;
+    		@include r(480)  { 
+				margin-bottom: 15px;
+			}
     	}
     	.footer_text{
     		width: 100%;
     		max-width: 242px;
+    		@include r(480)  { 
+    			text-align: center;
+				margin-bottom: 15px;
+			}
     	}
     	.footer-cr{
     		letter-spacing: 0.5px;
