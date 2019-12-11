@@ -36,12 +36,6 @@ body {
     outline: none;
     box-shadow: none; }
 
-main {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 890px; }
-
 .header {
   background-image: url(../img/m-h-night.jpg);
   background-repeat: no-repeat;
@@ -79,6 +73,7 @@ main {
       left: 0;
       width: 240px; }
   .header .header-wrap .header_text {
+    color: #fff;
     font-size: 14px;
     line-height: 20px;
     white-space: pre-line;
@@ -89,6 +84,7 @@ main {
     color: #fff; }
 
 main.section {
+  position: relative;
   padding: 30px 0 140px; }
   main.section .section_text {
     position: relative;
@@ -105,6 +101,9 @@ main.section {
       margin-left: 165px;
       width: 152px; }
   main.section .section_card_wrap {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 890px;
     margin-bottom: 20px; }
     main.section .section_card_wrap .section_card {
       display: flex;
@@ -127,6 +126,8 @@ main.section {
         main.section .section_card_wrap .section_card .section_card_right_container .section_card_text {
           text-align: left;
           margin-bottom: 15px; }
+        main.section .section_card_wrap .section_card .section_card_right_container .section_link {
+          color: #fff; }
   main.section .section_banner {
     background: linear-gradient(to right, #99374B, #DB9F08);
     border-radius: 5px;
@@ -134,9 +135,11 @@ main.section {
     display: flex;
     justify-content: space-between;
     position: absolute;
+    left: 50%;
+    bottom: -55px;
+    transform: translate(-50%, 0);
     width: 100%;
-    max-width: 1250px;
-    bottom: -70px; }
+    max-width: 950px; }
     main.section .section_banner .section_banner_text_wrap .section_banner_heading {
       position: relative;
       z-index: 1;
