@@ -12,7 +12,9 @@ body {
   max-width: 1240px;
   padding: 0;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .textBg, .header .header-wrap .header_heading::before, main.section .section_text::before, main.section .section_banner .section_banner_text_wrap .section_banner_heading::before {
   content: '';
@@ -98,8 +100,8 @@ main.section {
     main.section .section_text::before {
       position: absolute;
       bottom: 0;
-      margin-left: 165px;
-      width: 152px; }
+      margin-left: 167px;
+      width: 150px; }
   main.section .section_card_wrap {
     margin: 0 auto;
     width: 100%;
@@ -149,15 +151,13 @@ main.section {
       margin-bottom: 10px; }
       main.section .section_banner .section_banner_text_wrap .section_banner_heading::before {
         position: absolute;
-        left: 50px;
+        left: 80px;
         bottom: 0;
-        width: 65px; }
+        width: 45px; }
     main.section .section_banner .section_banner_text_wrap .section_banner_text {
       color: #fff; }
 
 .footer {
-  position: relative;
-  z-index: -1;
   padding: 100px 0 60px;
   background-color: #3B3F50;
   color: #fff; }

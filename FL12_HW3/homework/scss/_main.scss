@@ -29,6 +29,8 @@ body {
     padding: 0;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .textBg{
 	content: '';
@@ -129,8 +131,8 @@ main.section{
 			@extend .textBg;
 			position: absolute;
 			bottom: 0;
-		    margin-left: 165px;
-			width: 152px;
+		    margin-left: 167px;
+			width: 150px;
 		}
 	}
 	.section_card_wrap{
@@ -196,13 +198,13 @@ main.section{
 				&::before{
 					@extend .textBg;
 					position: absolute;
-					left: 50px;
+					left: 80px;
 					bottom: 0;
-					width: 65px;
+					width: 45px;
 				}
 			}
 			.section_banner_text{
-				color: #fff;
+				color: $whiteColor;
 			}
 		}
 		.section_banner_button{
@@ -212,8 +214,6 @@ main.section{
 }
 
 .footer{
-	position: relative;
-    z-index: -1;
 	padding: 100px 0 60px;
 	background-color: $sectionBg;
 	color: #fff;
