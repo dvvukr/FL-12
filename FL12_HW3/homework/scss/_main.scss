@@ -1,11 +1,5 @@
-*{
-	margin: 0;
-	padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background: $contentBg;
-    font-family: $mainFont;
+@mixin landingPadd ($pads...) {
+  	padding: $pads;
 }
 @mixin landingLogo{
 	img{
@@ -23,28 +17,39 @@ body {
 		}
 	}
 }
+@mixin textBg($width){
+	content: '';
+	background-color: $textBg;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+	width: $width;
+	height: 45px;
+}
+*{
+	margin: 0;
+	@include landingPadd(0px);
+    box-sizing: border-box;
+}
+body {
+    background: $contentBg;
+    font-family: $mainFont;
+}
 .size-wrap{
     width: 100%;
     max-width: 1240px;
-    padding: 0;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-}
-.textBg{
-	content: '';
-	display: inline-block;
-	background-color: $textBg;
-	z-index: -1;
-	height: 45px;
 }
 .button{
 	background-color: $btnBg;
 	color: $btnColor;
 	border: 1px solid $btnBg;
 	border-radius: 2px;
-	padding: 10px 35px;
+	@include landingPadd(10px 35px);
 	font-size: 13px;
 	font-weight: bold;
 
@@ -57,15 +62,10 @@ body {
 		box-shadow: none;
 	}
 }
-.button-link{
-
-}
 .header{
-	background-image: $headerBg;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	background: $sectionBg $headerBg center no-repeat;
 	background-size: 100%;
-	padding: 20px 0 140px;
+	@include landingPadd(20px 0 140px);
     border-bottom-right-radius: 600px 200px;
 
 	.header-wrap{
@@ -76,6 +76,10 @@ body {
 	    	align-items: center;
 	    	margin-bottom: 60px;
 			@include landingLogo;
+
+			& p{
+				color: $titleColor;
+			}
 		}
 
 		.header_heading{
@@ -83,6 +87,7 @@ body {
 		    font-size: 56px;
         	line-height: 60px;
     		letter-spacing: 1px;
+    		color: $titleColor;
     		font-weight: bold;
     		max-width: 450px;
 			margin-bottom: 25px;
@@ -90,11 +95,8 @@ body {
 			z-index: 1;
 
 			&::before{
-				@extend .textBg;
-				position: absolute;
-				bottom: 0;
+				@include textBg(240px);
 				left: 0;
-				width: 240px;
 			}
 		}
 		.header_text{
@@ -116,7 +118,7 @@ body {
 
 main.section{
 	position: relative;
-	padding: 30px 0 140px;
+	@include landingPadd(30px 0px 140px);
 
 	.section_text{
 		position: relative;
@@ -128,26 +130,21 @@ main.section{
 		text-align: center;
 		margin-bottom: 30px;
 		&::before{
-			@extend .textBg;
-			position: absolute;
-			bottom: 0;
+			@include textBg(150px);
 		    margin-left: 167px;
-			width: 150px;
 		}
 	}
 	.section_card_wrap{
-	    margin: 0 auto;
 	    width: 100%;
-	    max-width: 890px;
+	    max-width: 920px;
 		@extend .size-wrap;
-		margin-bottom: 20px;
 
 		.section_card{
 			display: flex;
 	    	align-items: center;
 			background-color: $sectionBg;
 			border-radius: 5px;
-			padding: 15px;
+			@include landingPadd(15px);
 			margin-bottom: 20px;
 
 			.section_card_img{
@@ -161,11 +158,12 @@ main.section{
 				color: $whiteColor;
 
 				.section_card_heading{
+					font-size: 18px;
 					font-weight: bold;
 				    margin-bottom: 20px;
 				}
 				.section_card_text{
-					text-align: left;
+					text-align: justify;
 					margin-bottom: 15px;
 				}
 				.section_link{
@@ -177,9 +175,10 @@ main.section{
 	.section_banner{
 		background: $gradientBg;
 		border-radius: 5px;
-	    padding: 30px 100px;
+		@include landingPadd(30px 125px);
     	display: flex;
     	justify-content: space-between;
+	    align-items: center;
     	position: absolute;
     	left: 50%;
 	    bottom: -55px;
@@ -191,16 +190,13 @@ main.section{
 			.section_banner_heading{
 				position: relative;
 				z-index: 1;
+				color: $titleColor;
 				font-size: 20px;
 				font-weight: bold;
-				color: $titleColor;
 				margin-bottom: 10px; 
 				&::before{
-					@extend .textBg;
-					position: absolute;
+					@include textBg(45px);
 					left: 80px;
-					bottom: 0;
-					width: 45px;
 				}
 			}
 			.section_banner_text{
@@ -214,7 +210,7 @@ main.section{
 }
 
 .footer{
-	padding: 100px 0 60px;
+	@include landingPadd(100px 0px 60px);
 	background-color: $sectionBg;
 	color: #fff;
 
@@ -222,6 +218,7 @@ main.section{
 	    display: flex;
     	justify-content: space-between;
     	align-items: center;
+    	font-size: 12px;
 		@extend .size-wrap;
 
     	.footer_logo{
@@ -231,12 +228,10 @@ main.section{
     		@include landingLogo;
     	}
     	.footer_text{
-		    font-size: 12px;
     		width: 100%;
     		max-width: 242px;
     	}
     	.footer-cr{
-    		font-size: 12px;
     		letter-spacing: 0.5px;
     	}
 	}
