@@ -38,7 +38,7 @@ main {
         display: block;
         font-size: 12px; }
 
-.section .section_card {
+main.section .section_card_wrap .section_card {
   display: flex;
   align-items: center;
   background-color: #21232E;
@@ -47,7 +47,8 @@ main {
 
 .footer {
   padding: 60px 0;
-  background-color: #21232E; }
+  background-color: #21232E;
+  color: #fff; }
   .footer .footer-wrap {
     display: flex;
     justify-content: space-between;
@@ -66,7 +67,5 @@ main {
           text-align: center;
           display: block;
           font-size: 12px; }
-    .footer .footer-wrap .footer_text, .footer .footer-wrap .footer-cr {
-      color: #fff; }
 
 /*# sourceMappingURL=style1.css.map */
