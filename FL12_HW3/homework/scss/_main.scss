@@ -70,7 +70,6 @@ body {
 %button{
 	background-color: $btnBg;
 	color: $btnColor;
-	border: 1px solid $btnBg;
 	border-radius: 2px;
 	@include landingPadd(10px 35px);
 	font-size: $landingFontSize;
