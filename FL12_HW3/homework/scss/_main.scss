@@ -71,6 +71,7 @@ body {
 	background-color: $btnBg;
 	color: $btnColor;
 	border-radius: 2px;
+	border: none;
 	@include landingPadd(10px 35px);
 	font-size: $landingFontSize;
 	font-weight: bold;
