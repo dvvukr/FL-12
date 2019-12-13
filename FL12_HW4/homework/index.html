@@ -8,94 +8,152 @@
 </head>
 <body>
 	
-<header>
+<header class="header">
+	<div class="wrapper">
 
-	<span>Front-end Lab</span>
+		<div class="logo">
+			<a href="#">Front-end Lab</a>
+		</div>
 
-	<nav>
-		<ul>
-			<li>
-				<a href="#">Home</a>
-			</li>
-			<li>
-				<a href="#">About</a>
-			</li>
-			<li>
-				<a href="#">Gallery</a>
-			</li>
-			<li>
-				<a href="#">Contact</a>
-			</li>
-		</ul>
-	</nav>
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__item active">
+					<a class="nav__link" href="#">Home</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__link" href="#">About</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__link" href="#">Gallery</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__link" href="#">Contact</a>
+				</li>
+			</ul>
+		</nav>
 
-	<h1>Hello! This is Front-end Lab.</h1>
-	<p>EPAM Front-end Lab</p>
-	<a href="#main">Discover More</a>
-
+	</div>
 </header>
 
-<main id="main">
-	<article>
+<section class="main__block">
+	<h1 class="main__block-title">Hello! This is Front-end Lab.</h1>
+	<p class="main__block-desc">EPAM Front-end Lab</p>
+	<a href="#blog">Discover More</a>
+</section>
 
-		<h2>We Help You To Make Front-end Great Again</h2>
+<main class="blog" id="blog">
+	<div class="wrapper">
+		<article class="blog__post">
+			<div class="blog__post-image">
+				<img src="img/blog-image1.jpg" alt="blog-image">
+			</div>
+			<h2 class="blog__post-title">
+				<a href="#">We Help You To Make Front-end Great Again</a>
+			</h2>
 
-		Jen Lopez
+			<div>
+				<img src="img/author-image1.jpg" alt="Jen Lopez">
+				Jen Lopez
+				July 22, 2017
+				35 Comments
+			</div>
+			 
+			<p class="blog__post-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<a href="#">Continue Reading</a>
+		</article>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+		<article class="blog__post">
+			<div class="blog__post-image">
+				<img src="img/blog-image2.jpg" alt="blog-image">
+			</div>
+			<h2 class="blog__post-title">
+				<a href="#">In pretium tellus et ante accumsan</a>
+			</h2>
+			<div>
+				<img src="img/author-image2.jpg" alt="Leo Dennis">
+				Leo Dennis
+				June 10, 2017
+				48 Comments
+			</div>
 
-		<a href="#">Continue Reading</a>
-	</article>
-	<article>
-		<h2>In pretium tellus et ante accumsan</h2>
+			<p class="blog__post-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<a href="#">Continue Reading</a>
+		</article>
 
-		Leo Dennis
+		<article class="blog__post">
+			<div class="blog__post-image">
+				<img src="img/blog-image3.jpg" alt="blog-image">
+			</div>
+			<h2 class="blog__post-title">
+				<a href="#">Nam interdum maximus dolor faucibus</a>
+			</h2>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<div>
+				<img src="img/author-image1.jpg" alt="Jen Lopez">
+				Jen Lopez
+				May 30, 2017
+				63 Comments
+			</div>
 
-		<a href="#">Continue Reading</a>
-	</article>
-	<article>
-		<h2>Nam interdum maximus dolor faucibus</h2>
+			<p class="blog__post-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<a href="#">Continue Reading</a>
+		</article>
 
-		Jen Lopez
+		<article class="blog__post">
+			<div class="blog__post-image">
+				<img src="img/blog-image4.jpg" alt="blog-image">
+			</div>
+			<h2 class="blog__post-title">
+				<a href="#">The ingredients that make a great burger</a>
+			</h2>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<div>
+				<img src="img/author-image2.jpg" alt="Leo Dennis">
+				Leo Dennis
+				April 18, 2017
+				124 Comments
+			</div>
 
-		<a href="#">Continue Reading</a>
-	</article>
-	<article>
-		<h2>The ingredients that make a great burger</h2>
+			<p class="blog__post-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<a href="#">Continue Reading</a>
+		</article>
 
-		Leo Dennis
+		<article class="blog__post">
+			<div class="blog__post-image">
+				<img src="img/blog-image5.jpg" alt="blog-image">
+			</div>
+			<h2 class="blog__post-title">
+				<a href="#">Vestibulum vel mauris nec ex tempus</a>
+			</h2>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<div>
+				<img src="img/author-image1.jpg" alt="">
+				Jen Lopez
+				March 12, 2017
+				256 Comments
+			</div>
 
-		<a href="#">Continue Reading</a>
-	</article>
-	<article>
-		<h2>Vestibulum vel mauris nec ex tempus</h2>
-
-		Jen Lopez
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-		<a href="#">Continue Reading</a>
-	</article>
+			<p class="blog__post-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<a href="#">Continue Reading</a>
+		</article>
+	</div>
 </main>
 
-<footer>
-	EPAM LAB
-	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-
-	<span>Copyright © 2019 EPAM</span>
-
-
-	Talk to us
-
-	512 Delicious Street, San Francisco, CA 10880
-	010-020-0990
-	info@company.com
+<footer class="footer">
+	<div class="wrapper">
+		<div>
+			<h3>EPAM LAB</h3>
+			<p class="footer__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+			<span class="footer__copyright">Copyright © 2019 EPAM</span>
+		</div>
+		 
+		<div>
+			<h3>Talk to us</h3>
+			512 Delicious Street, San Francisco, CA 10880
+			<a href="tel:0100200990">010-020-0990</a>
+			<a href="mailto:info@company.com">info@company.com</a>
+		</div>
+	</div>
 </footer>
 
 </body>
