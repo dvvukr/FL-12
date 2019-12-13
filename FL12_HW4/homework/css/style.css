@@ -8,6 +8,10 @@ body{
 	background-color: #fff;
 	color: #777;
 }
+a{
+	color: #777;
+	text-decoration: none;
+}
 .wrapper{
 	width: 100%;
 	max-width: 1200px;
@@ -25,6 +29,7 @@ body{
 .logo a{
 	color: #777;
 	font-size: 22px;
+	text-transform: uppercase;
 }
 .nav{}
 .nav__list{
@@ -40,7 +45,13 @@ body{
 .nav__item.active .nav__link{
 	color: #bfba55;
 }
-.nav__link{}
+.nav__link{
+	color: #777;
+	font-size: 14px;
+}
+.nav__link:hover{
+	color: #bfba55;
+}
 
 .main__block{
     background: url(../img/home-bg.jpg) center no-repeat;
@@ -61,6 +72,8 @@ body{
 	font-size: 14px;
 	margin-bottom: 25px;
 }
+.main__block-btn{}
+.main__block-btn:hover{}
 
 .blog{
 	padding: 70px 0;
@@ -74,12 +87,39 @@ body{
 .blog__post-image{
 	margin-bottom: 20px;
 }
+.blog__post-image img{
+	width: 100%;
+}
 .blog__post-title{
 	margin-bottom: 10px;
 }
-.blog__post-description{
+.blog__post-title a{
+	color: #000;
+}
+.blog__post-info{
 	margin-bottom: 15px;
 }
+.blog__post-info, .blog__post-info a{
+	display: flex;	
+	align-items: center;
+}
+.blog__post-info a{
+	margin-right: 15px;
+}
+.blog__post-info a:last-child{
+	margin-right: 0;
+}
+.blog__post-info .autor-img{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+.blog__post-desc{
+	margin-bottom: 15px;
+}
+.blog__post-btn{}
+.blog__post-btn:hover{}
 
 .footer{
 	background-color: #000;
