@@ -13,15 +13,23 @@ a{
 	color: #777;
 	text-decoration: none;
 }
+.btn{
+	background-color: #ffffff;
+	display: inline-block;
+	padding: 15px 25px;
+	border-radius: 100px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
 .wrapper{
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1170px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
 .header{
 	background-color: #fff;
-	padding: 15px 0;
+	padding: 20px 0;
     position: sticky;
     top: 0;
 }
@@ -58,9 +66,11 @@ a{
 }
 
 .main__block{
-    background: url(../img/home-bg.jpg) center no-repeat;
+    background: url(../img/home-bg.jpg) no-repeat;
     background-size: cover;
+    max-width: 1600px;
     height: 100vh;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,17 +86,33 @@ a{
 	font-size: 14px;
 	margin-bottom: 25px;
 }
-.main__block-btn{}
-.main__block-btn:hover{}
+.main__block-btn{
+	border: 1px solid #ffffff;
+    color: #444;
+    font-size: 12px;
+    text-transform: uppercase; 
+}
+.main__block-btn:hover{
+    background: transparent;
+    color: #fff;
+}
 
 .blog{
 	padding: 70px 0;
 }
+.blog .wrapper,
+.footer .wrapper {
+    max-width: 930px;
+}
 .blog__post{
-	margin-bottom: 35px;
+    border-bottom: 1px solid #f8f8f8;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
 }
 .blog__post:last-child{
+    border-bottom: none;
 	margin-bottom: 0;
+    padding-bottom: 0;
 }
 .blog__post-image{
 	margin-bottom: 20px;
@@ -107,8 +133,11 @@ a{
 	display: flex;	
 	align-items: center;
 }
-.blog__post-info a{
+.blog__post-info-item{
 	margin-right: 15px;
+}
+.blog__post-message-icon{
+	margin-right: 5px;
 }
 .blog__post-info a:last-child{
 	margin-right: 0;
@@ -122,8 +151,15 @@ a{
 .blog__post-desc{
 	margin-bottom: 15px;
 }
-.blog__post-btn{}
-.blog__post-btn:hover{}
+.blog__post-btn{
+	border: 1px solid #ccc;
+    color: #777;  
+}
+.blog__post-btn:hover{
+	background-color: #777;
+	border: 1px solid #777;
+    color: #fff; 
+}
 
 .footer{
 	background-color: #000;
@@ -132,5 +168,24 @@ a{
 .footer .wrapper{
 	display: flex;
 }
-.footer__desc{}
+.footer .footer__col, .footer .footer__col-right{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.footer .footer__col-right{
+     padding-left: 100px;
+}
+.footer__title{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.footer__desc{
+    display: block;
+    margin-bottom: 15px;
+}
+.footer__contacts{
+	display: block;
+	margin-bottom: 15px;
+}
 .footer__copyright{}
