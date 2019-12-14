@@ -1,7 +1,14 @@
-$mainFont: 'Source Sans Pro', sans-serif;
+$fontFamily: (
+	'mainFont': 'Source Sans Pro', 
+	'firstFont': 'Source Sans Pro'
+);
+$fontWeight: (
+	'regular': 400, 
+	'semibold': 600, 
+	'bold': 700
+);
+$template: 'light';
 $landingFontSize: 13px;
-$firstFont: 'Hind', sans-serif;
-$secondFont: 'Fresca', sans-serif;
 $headerBg: url(../img/m-h-day.jpg);
 $headerTextColor: #2C2F3C;
 $contentBg: #fff;

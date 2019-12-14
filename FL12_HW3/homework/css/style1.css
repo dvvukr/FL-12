@@ -5,7 +5,8 @@
 
 body {
   background: #fff;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400; }
 
 .header-wrap, .section_card_wrap, .footer-wrap {
   width: 100%;
@@ -14,26 +15,6 @@ body {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-
-.header-wrap .login, .section_card_wrap .section_card .section_card_right_container .section_link {
-  color: #fff; }
-  .header-wrap .login:hover, .section_card_wrap .section_card .section_card_right_container .section_link:hover {
-    color: #e3e3e3; }
-
-.header-wrap .header_button, .section_banner_button {
-  background-color: #699900;
-  color: #fff;
-  border-radius: 2px;
-  border: none;
-  padding: 10px 35px;
-  font-size: 13px;
-  font-weight: bold; }
-  .header-wrap .header_button:hover, .section_banner_button:hover {
-    background-color: #77ad00;
-    cursor: pointer; }
-  .header-wrap .header_button:focus, .section_banner_button:focus {
-    outline: none;
-    box-shadow: none; }
 
 .header {
   background: #21232E url(../img/m-h-day.jpg) center no-repeat;
@@ -53,7 +34,9 @@ body {
       height: 36px;
       margin-right: 10px; }
     .header-wrap .landing-logo p {
-      font-size: 20px; }
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 20px;
+      font-weight: 600; }
       .header-wrap .landing-logo p span {
         text-align: center;
         display: block;
@@ -64,12 +47,11 @@ body {
     .header-wrap .landing-logo p {
       color: #2C2F3C; }
   .header-wrap .header_heading {
-    font-family: "Source Sans Pro", sans-serif;
     font-size: 56px;
     line-height: 60px;
     letter-spacing: 1px;
     color: #2C2F3C;
-    font-weight: bold;
+    font-weight: 700;
     max-width: 450px;
     margin-bottom: 25px;
     position: relative;
@@ -103,23 +85,40 @@ body {
     white-space: pre-line;
     margin-bottom: 45px; }
   .header-wrap .header_button {
+    background-color: #699900;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    padding: 12px 35px;
+    font-size: 13px;
+    font-weight: 700;
     margin-right: 115px; }
+    .header-wrap .header_button:hover {
+      background-color: #77ad00;
+      cursor: pointer; }
+    .header-wrap .header_button:focus {
+      outline: none;
+      box-shadow: none; }
     @media (max-width: 480px) {
       .header-wrap .header_button {
         display: block;
         margin-bottom: 15px; } }
+  .header-wrap .login {
+    color: #fff; }
+    .header-wrap .login:hover {
+      color: #e3e3e3; }
 
 .section {
   position: relative;
   padding: 30px 0px 140px; }
   .section_text {
-    font-family: "Hind", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     position: relative;
     z-index: 1;
     color: #2C2F3C;
     font-size: 30px;
     letter-spacing: 1px;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 25px; }
     .section_text::before {
@@ -127,11 +126,11 @@ body {
       background-color: #14A0C7;
       display: inline-block;
       position: absolute;
-      bottom: 10px;
+      bottom: 5px;
       z-index: -1;
       width: 150px;
       height: 45px;
-      margin-left: 175px; }
+      margin-left: 168px; }
     @media (max-width: 480px) {
       .section_text {
         font-size: 26px; }
@@ -176,14 +175,18 @@ body {
             padding: 0; } }
         .section_card_wrap .section_card .section_card_right_container .section_card_heading {
           font-size: 18px;
-          font-weight: bold;
+          font-weight: 700;
           margin-bottom: 20px; }
         .section_card_wrap .section_card .section_card_right_container .section_card_text {
           font-size: 14px;
+          font-family: "Source Sans Pro", sans-serif;
           text-align: justify;
           margin-bottom: 15px; }
         .section_card_wrap .section_card .section_card_right_container .section_link {
-          font-size: 13px; }
+          font-size: 13px;
+          color: #fff; }
+          .section_card_wrap .section_card .section_card_right_container .section_link:hover {
+            color: #e3e3e3; }
   .section_banner {
     background: linear-gradient(to right, #629217, #3260C6);
     border-radius: 5px;
@@ -206,7 +209,7 @@ body {
       z-index: 1;
       color: #2C2F3C;
       font-size: 24px;
-      font-weight: bold;
+      font-weight: 700;
       margin-bottom: 10px; }
       .section_banner_text_wrap .section_banner_heading::before {
         content: '';
@@ -224,11 +227,26 @@ body {
           .section_banner_text_wrap .section_banner_heading::before {
             left: 78px; } }
     .section_banner_text_wrap .section_banner_text {
+      font-family: "Source Sans Pro", sans-serif;
       font-size: 13px;
       color: #fff; }
       @media (max-width: 768px) {
         .section_banner_text_wrap .section_banner_text {
           margin-bottom: 15px; } }
+    .section_banner_button {
+      background-color: #699900;
+      color: #fff;
+      border-radius: 2px;
+      border: none;
+      padding: 12px 35px;
+      font-size: 13px;
+      font-weight: 700; }
+      .section_banner_button:hover {
+        background-color: #77ad00;
+        cursor: pointer; }
+      .section_banner_button:focus {
+        outline: none;
+        box-shadow: none; }
 
 .footer {
   padding: 100px 0px 60px;
@@ -254,7 +272,9 @@ body {
         height: 36px;
         margin-right: 10px; }
       .footer-wrap .footer_logo p {
-        font-size: 20px; }
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 20px;
+        font-weight: 600; }
         .footer-wrap .footer_logo p span {
           text-align: center;
           display: block;
@@ -263,6 +283,7 @@ body {
         .footer-wrap .footer_logo {
           margin-bottom: 15px; } }
     .footer-wrap .footer_text {
+      font-family: "Source Sans Pro", sans-serif;
       width: 100%;
       max-width: 242px; }
       @media (max-width: 480px) {
@@ -270,4 +291,5 @@ body {
           text-align: center;
           margin-bottom: 15px; } }
     .footer-wrap .footer-cr {
+      font-family: "Source Sans Pro", sans-serif;
       letter-spacing: 0.5px; }

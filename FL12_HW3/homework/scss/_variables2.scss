@@ -1,7 +1,14 @@
-$mainFont: 'Source Sans Pro', sans-serif;
+$fontFamily: (
+	'mainFont': 'Fresca', 
+	'firstFont': 'Source Sans Pro'
+);
+$fontWeight: (
+	'regular': 400, 
+	'semibold': 600, 
+	'bold': 700
+);
+$template: 'dark';
 $landingFontSize: 13px;
-$firstFont: 'Hind', sans-serif;
-$secondFont: 'Fresca', sans-serif;
 $headerBg: url(../img/m-h-night.jpg);
 $headerTextColor: #fff;
 $contentBg: #21232E;
