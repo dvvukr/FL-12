@@ -68,9 +68,8 @@ a{
 	color: #bfba55;
 }
 .main__block{
-    background: linear-gradient(to right, #000000b3, #000000b3), url(../img/home-bg.jpg) no-repeat;
+    background: linear-gradient(to right, #000000b3, #000000b3), url(../img/home-bg.jpg) top no-repeat;
     background-size: cover;
-    background-position: top;
     max-width: 1600px;
     height: 100vh;
     margin: 0 auto;
