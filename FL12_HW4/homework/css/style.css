@@ -208,6 +208,9 @@ a.blog__post-info-item:hover {
 	display: block;
 	margin-bottom: 15px;
 }
+.footer__contacts:hover {
+    color: #fff;
+}
 @media (max-width: 575.98px) { 
 	.nav__item {
 	    margin: 0 10px;
