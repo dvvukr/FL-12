@@ -4,10 +4,11 @@
 	box-sizing: border-box;
 }
 body{
-	font-family: '', sans-serif;
+	font-family: 'Merriweather', sans-serif;
 	position: relative;
 	background-color: #fff;
 	color: #777;
+    font-size: 14px;
 }
 a{
 	color: #777;
@@ -29,7 +30,7 @@ a{
 }
 .header{
 	background-color: #fff;
-	padding: 20px 0;
+	padding: 30px 0;
     position: sticky;
     top: 0;
 }
@@ -40,16 +41,17 @@ a{
 }
 .logo a{
 	color: #777;
-	font-size: 22px;
+	font-size: 20px;
 	text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
-.nav{}
 .nav__list{
     list-style: none;
 }
 .nav__item{
 	display: inline-block;
-    margin: 0 15px;
+    margin: 0 18px;
 }
 .nav__item:last-child{
 	margin-right: 0;
@@ -59,15 +61,16 @@ a{
 }
 .nav__link{
 	color: #777;
-	font-size: 14px;
+	font-size: 16px;
+	letter-spacing: 1px;
 }
 .nav__link:hover{
 	color: #bfba55;
 }
-
 .main__block{
     background: url(../img/home-bg.jpg) no-repeat;
     background-size: cover;
+    background-position: top;
     max-width: 1600px;
     height: 100vh;
     margin: 0 auto;
@@ -78,25 +81,26 @@ a{
 }
 .main__block-title{
 	color: #fff;
-	font-size: 42px;
+	font-size: 60px;
+	text-align: center;
 	margin-bottom: 15px;
 }
 .main__block-desc{
 	color: #bfba55;
 	font-size: 14px;
-	margin-bottom: 25px;
+    letter-spacing: 1px;
+	margin-bottom: 50px;
 }
 .main__block-btn{
 	border: 1px solid #ffffff;
     color: #444;
-    font-size: 12px;
+    font-size: 11px;
     text-transform: uppercase; 
 }
 .main__block-btn:hover{
     background: transparent;
     color: #fff;
 }
-
 .blog{
 	padding: 70px 0;
 }
@@ -105,7 +109,7 @@ a{
     max-width: 930px;
 }
 .blog__post{
-    border-bottom: 1px solid #f8f8f8;
+    border-bottom: 1px solid #F8F8F8;
     padding-bottom: 60px;
     margin-bottom: 60px;
 }
@@ -115,26 +119,36 @@ a{
     padding-bottom: 0;
 }
 .blog__post-image{
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .blog__post-image img{
 	width: 100%;
 }
 .blog__post-title{
-	margin-bottom: 10px;
+	font-size: 25px;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
 }
 .blog__post-title a{
 	color: #000;
 }
+.blog__post-title a:hover{
+	color: #777;
+}
 .blog__post-info{
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 .blog__post-info, .blog__post-info a{
 	display: flex;	
 	align-items: center;
 }
 .blog__post-info-item{
-	margin-right: 15px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+	margin-right: 20px;
+}
+a.blog__post-info-item:hover {
+    color: rgba(119, 119, 119, 0.8);
 }
 .blog__post-message-icon{
 	margin-right: 5px;
@@ -143,24 +157,27 @@ a{
 	margin-right: 0;
 }
 .blog__post-info .autor-img{
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
-	margin-right: 5px;
+	margin-right: 10px;
 }
 .blog__post-desc{
-	margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 26px;
+	margin-bottom: 30px;
 }
 .blog__post-btn{
+	padding: 13px 21px;
+    font-size: 14px;
+    letter-spacing: 1px;
 	border: 1px solid #ccc;
     color: #777;  
 }
 .blog__post-btn:hover{
 	background-color: #777;
-	border: 1px solid #777;
     color: #fff; 
 }
-
 .footer{
 	background-color: #000;
 	padding: 60px 0 50px;
@@ -178,14 +195,69 @@ a{
 .footer__title{
     color: #fff;
     font-size: 24px;
-    margin-bottom: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 .footer__desc{
     display: block;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.2px;
     margin-bottom: 15px;
 }
 .footer__contacts{
 	display: block;
 	margin-bottom: 15px;
 }
-.footer__copyright{}
+@media (max-width: 575.98px) { 
+	.nav__item {
+	    margin: 0 10px;
+	}
+	.nav__link {
+	    font-size: 14px;
+	}
+	.main__block-title {
+	    font-size: 32px;
+	}
+	.main__block-desc {
+	    margin-bottom: 30px;
+	}
+	.blog {
+	    padding: 35px 0;
+	}
+	.blog__post {
+	    padding-bottom: 30px;
+	    margin-bottom: 30px;
+	}
+	.blog__post-info {
+	    flex-direction: column;
+	    align-items: flex-start;
+	}
+	.blog__post-info-item {
+	    margin-bottom: 10px;
+	}
+	.footer .wrapper {
+	    flex-direction: column;
+	}
+	.footer .footer__col, .footer .footer__col-right {
+	    flex: 0 0 100%;
+	    max-width: 100%;
+	}
+	.footer .footer__col:first-child {
+	    margin-bottom: 20px;
+	}
+	.footer .footer__col-right {
+	    padding-left: 0;
+	}
+}
+@media (max-width: 767.98px) { 
+	.header {
+	    padding: 15px 0;
+	}
+	.header .wrapper {
+	    flex-direction: column;
+	}
+	.logo {
+	    margin-bottom: 15px;
+	}
+}
