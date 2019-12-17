@@ -8,10 +8,12 @@
   --link: #fff;
   --link--hover: #1f52a4;
   --bg-footer-color: #024161;
+  --bg-color-news: #fff;
 }
 
 body {
-  font-family: roboto;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color--dark);
 }
 .post-1 {
 	background: #9d27b0;
@@ -30,3 +32,85 @@ body {
 }
 
 /* Your styles go here */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page-wrap{
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.header{
+  background-color: var(--bg-color--header);
+  padding: 0px 40px 0px 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+}
+.logo a span{
+  color: #A93762;
+}
+
+.header__nav ul{
+  list-style: none;
+}
+.header__nav ul li {
+  display: inline-block;
+  padding: 30px 0;
+}
+.header__nav ul li:hover{
+  background-color: #1f52a4;
+}
+.header__nav ul li a{
+  color: var(--link);
+  text-decoration: none;
+}
+
+section{
+  background: url(../img/post0.jpg) center no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+main{}
+.post-item {
+  display: flex;
+}
+.post-item-img {
+  width: 100%;
+}
+.post-item-title{}
+.post-item-desc{}
+
+aside{}
+.news-item{
+  background-color: var(--bg-color-news);
+}
+.news-item-img{
+  width: 100%;
+}
+.news-item-title{}
+.news-item-desc{}
+
+.footer{
+  background-color: var(--bg-footer-color);
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1400px) {}
+@media only screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 480px) {}
