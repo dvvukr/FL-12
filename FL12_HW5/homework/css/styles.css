@@ -149,11 +149,20 @@ aside{}
 
 @media only screen and (max-width: 1400px) {}
 @media only screen and (max-width: 768px) {
-  .header {
-    flex-direction: column;
-  }
-  .post-item {
-	    flex-direction: column;
+	.header {
+	   flex-direction: column;
+	}
+  	.post-item {
+	   flex-direction: column;
+	}
+	.post-item-img-wrap {
+	    order: 1;
+	}
+	.post-item-desc-wrap {
+	    order: 2;
+	}
+	.post-item:nth-child(even) .post-item-desc-wrap {
+	    text-align: left;
 	}
 }
 @media only screen and (max-width: 480px) {}
