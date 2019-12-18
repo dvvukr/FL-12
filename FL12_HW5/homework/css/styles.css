@@ -7,13 +7,16 @@
   --bg-color--header: #024161;
   --link: #fff;
   --link--hover: #1f52a4;
+  --footer-color: #637693;
   --bg-footer-color: #024161;
   --bg-color-news: #fff;
+  --post-color: #fff;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--bg-color--dark);
+  color: #000;
 }
 .post-1 {
 	background: #9d27b0;
@@ -38,6 +41,7 @@ body {
   box-sizing: border-box;
 }
 .page-wrap{
+  position: relative;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -49,6 +53,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
 }
 .logo a {
     color: #fff;
@@ -64,7 +70,6 @@ body {
 }
 .header__nav ul li {
   display: inline-block;
-  padding: 30px 0;
 }
 .header__nav ul li:hover{
   background-color: #1f52a4;
@@ -72,23 +77,50 @@ body {
 .header__nav ul li a{
   color: var(--link);
   text-decoration: none;
+  display: inline-block;
+  padding: 30px;
 }
 
-section{
+.main-post-item{
   background: url(../img/post0.jpg) center no-repeat;
   background-size: cover;
   margin-bottom: 20px;
+  padding: 30px;
 }
 
 main{}
 .post-item {
   display: flex;
 }
+.post-item:nth-child(even) .post-item-desc-wrap {
+    text-align: right;
+}
+.post-item:nth-child(odd) .post-item-desc-wrap {
+    text-align: left;
+}
+.post-item-fw{
+	padding: 40px;
+	flex-direction: column;
+}
+.post-item-img-wrap{}
 .post-item-img {
   width: 100%;
 }
-.post-item-title{}
-.post-item-desc{}
+.post-item-desc-wrap{
+	padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.post-item-title{
+	color: var(--post-color);
+    font-size: 34px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.post-item-desc{
+	color: var(--post-color);
+}
 
 aside{}
 .news-item{
@@ -97,11 +129,19 @@ aside{}
 .news-item-img{
   width: 100%;
 }
-.news-item-title{}
+.news-item-desc-wrap{
+	padding: 20px;
+}
+.news-item-title{
+	font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
 .news-item-desc{}
 
 .footer{
   background-color: var(--bg-footer-color);
+  color: var(--footer-color);
   padding: 20px 15px;
   display: flex;
   justify-content: space-between;
@@ -112,5 +152,8 @@ aside{}
   .header {
     flex-direction: column;
   }
+  .post-item {
+	    flex-direction: column;
+	}
 }
 @media only screen and (max-width: 480px) {}
