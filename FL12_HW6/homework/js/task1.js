@@ -1,7 +1,9 @@
 let a = parseInt(prompt('Enter value A:', 1));
 console.log('Value A:' + a);
+
 let b = parseInt(prompt('Enter value B:', 1));
 console.log('Value B:' + b);
+
 let c = parseInt(prompt('Enter value C:', 1));
 console.log('Value C:' + c);
 
