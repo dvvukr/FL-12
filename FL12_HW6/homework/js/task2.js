@@ -1,7 +1,9 @@
 let a = prompt('Enter the side of triangle A:');
 console.log('Side A:', a);
+
 let b = prompt('Enter the side of triangle B:');
 console.log('Side B:', b);
+
 let c = prompt('Enter the side of triangle C:');
 console.log('Side C:', c);
 
