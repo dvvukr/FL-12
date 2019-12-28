@@ -19,7 +19,6 @@ if ( startGame ) {
 				alert('Thank you for your participation. Your prize is: … $');
 			}
 		} 
-
 	}
 } else{
 	alert('You did not become a billionaire, but can.');
