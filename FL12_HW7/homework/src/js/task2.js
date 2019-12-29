@@ -5,7 +5,6 @@ if ( startGame ) {
 	var userInput = parseInt(prompt('Choose an integer number in range 0 to 8:', ''));
 	if (userInput){
 		attempt = attempt + 1;
-		// var mathRandom = Math.random(1, 8);
 		var mathRandom = Math.floor(Math.random() * 8);
 		console.log(mathRandom);
 		if ( userInput === mathRandom ){
